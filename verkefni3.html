@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+</head>
+<html>
+<body>
+
+<script type="text/javascript">
+
+ 	//
+
+</script>
+
+<h1>Verkefni 3</h1>
+<h3>Bjarki Lárusson</h3>
+
+<hr>
+
+<h2>2</h2>
+<p>Útkoman er b = 5, og a verður undefined. Ástæðan er að b verður að global var, en a local inn í functioninu. Þ.e.a.s útkoman verður var a = (b = 3).</p>
+<hr>
+
+<h2>3</h2>
+<p>Útkoman úr a = undefined, en foo() skilar 2. Ef að ég færi 'var a = 1' yfir console.log(a) þá fæ ég útkomuna = 1.</p>
+<hr>
+
+<h2>4</h2>
+<p>Kóðinn prentar út Aurelio De Rosa og John Doe.</p>
+<p>Í fyrsta console.log-inu, getFullname() er vísað í fullname object-ið, og er þar sem að það returnar this.fullname þá prentast út Aurelio De Rosa.</p>
+<p>Í seinna console.log-inu þá er búið til nýtt varible test. Þar sem að það er vísað í fullname global varible og getFullname function-ið. Og þá prentast út John Doe.</p>
+<hr>
+
+<h2>5</h2>
+<p>a) Counter er aldrei skilgreindur</p>
+<p>b) Þar sem að counter er ekki skilgreindur, þá býr javascript til glabal varible</p>
+<p>c)<code>
+	function canYouSpotTheProblem() {
+
+		"use strict";
+
+	  for (var counter = 0; counter < 10; counter++)
+	    console.log("Happy happy");
+		}
+
+	canYouSpotTheProblem();
+</code></p>
+<hr>
+
+<h2>6</h2>
+<p>a) Gleymdist að setja "new Person("nafn")"</p>
+<p>b) "use strict";
+	function Person(name) { this.name = name; }
+
+	var ferdinand = new Person("Ferdinand"); 
+
+	console.log(name); 
+	console.log(ferdinand.name); </p>
+<hr>
+
+<h2>7</h2>
+<p><code>
+	function numberToString(n, base) {
+  var result = "", sign = "";
+  if (n < 0) {
+    sign = "-";
+    n = -n;
+  }
+  do {
+    result = String(n = Math.floor(n / base)) + result;
+    n /= base;
+  } while (n > 0);
+  return sign + result;
+}
+console.log(numberToString(13, 10)); // → 1.5e-3231.3e-3221.3e-3211.3e-3201.3e-3191.3e-3181.3…
+</code></p>
+<hr>
+
+
+<h2>8</h2>
+<p>Forritið biður um heiltölu, og til þess að notandinn skrifi ekki inn streng þá er notað IsNan sem þýðir not a number. Semsagt ef að notandinn slær inn streng í stðainn fyrir heiltölu þá skilar forritið null.</p>
+<hr>
+
+<h2>9</h2>
+<p>Fyrst spyr forritið um átt, og býst við að notandinn slái inn annaðhvort left eða right.</p>
+<p>Ef að notandinn slær það ekki inn, þá kastar það fram villu og hættir við keyrsluna..</p>
+<hr>
+
+</body>
+</html>
